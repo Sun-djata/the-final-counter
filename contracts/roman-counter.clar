@@ -74,7 +74,7 @@
 )
 
 ;; private function to perform the conversion to roman numerals
-(define-public (to-roman (number int))
+(define-private (to-roman (number int))
     (begin
         (asserts! (> number 0) ZERO-OR-NEGATIV-NOT-ALLOWED)
         (var-set romanCounter "")
@@ -82,10 +82,10 @@
         (map conversionSteps (list romanNumerals1 romanNumerals2 romanNumerals3 romanNumerals4
                                     romanNumerals5 romanNumerals6 romanNumerals7 romanNumerals8
                                     romanNumerals9 romanNumerals10 romanNumerals11 romanNumerals12 
-                                    romanNumerals13 romanNumerals14 romanNumerals15 romanNumerals16))
-
-       
-        (ok (var-get romanCounter))
+                                    romanNumerals13 romanNumerals14 romanNumerals15 romanNumerals16
+                            )
+        )      
+        (ok true)
     )
 )
 
